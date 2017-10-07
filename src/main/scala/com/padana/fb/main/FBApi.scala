@@ -7,12 +7,15 @@ import net.liftweb.json._
 import com.padana.fb.helpers.HttpHelper
 import com.padana.fb.models.Albums
 
+import scala.collection.mutable
+
 class FBApi(userfbId: String, accessToken: String) {
   val httpHelper: HttpHelper = new HttpHelper
+  implicit val formats = DefaultFormats
 
   val configFile = "fb-api-padana.config"
   val bufferedSource = Source.fromFile(configFile)
-  var configValues: HashMap[String, String] = ()
+  var configValues: HashMap[String, String] = new mutable.HashMap[String, String]()
   for (line <- bufferedSource.getLines) {
     configValues += (line.split("=")(0) -> line.split("=")(1))
   }
@@ -39,4 +42,9 @@ class FBApi(userfbId: String, accessToken: String) {
     }
     allAlbums
   }
+}
+
+object FBApi extends App {
+  var fBApi: FBApi = new FBApi("1706661999352250", "EAACdEDMoDMQBALGniXl6t6MckjlzoLTY4TBbl9Tw4zsSbgSsgtmz5932ZBW2SMfUrbrLLo37Axk4cZAIeIfXClp1mdtHI3QUHdK5W0ewooP2nQbNd1rddTbdqIslzZBYCoyOF53AGRmeDtBtbjiFCD6fmTuD5ILCrQ76r3ZBFecSyLAuC30fN1HxOZCk1BGQCZAPHzxUyOJFSWPlPgJD9q")
+  println(fBApi.getAlbums())
 }
