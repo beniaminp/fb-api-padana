@@ -1,3 +1,4 @@
+/*
 package com.padana.fb.main
 
 import com.padana.fb.helpers.HttpHelper
@@ -32,4 +33,4 @@ class Albums(configValues: HashMap[String, String], httpHelper: HttpHelper) {
     var retAlbum: ArrayBuffer[Album] = getAlbums().filter(_.name.getOrElse("").toLowerCase.equals(name.toLowerCase))
     retAlbum(0)
   }
-}
+}*/

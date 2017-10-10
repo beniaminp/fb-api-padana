@@ -14,3 +14,7 @@ oneJarSettings
 libraryDependencies += "com.typesafe.play" % "play-json_2.12" % "2.6.6"
 
 libraryDependencies += "commons-lang" % "commons-lang" % "2.6"
+
+// https://mvnrepository.com/artifact/com.google.code.gson/gson
+libraryDependencies += "com.google.code.gson" % "gson" % "2.8.2"
+
