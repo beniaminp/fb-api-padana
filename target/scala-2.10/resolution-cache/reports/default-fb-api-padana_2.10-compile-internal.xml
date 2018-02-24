@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="fb-api-padana_2.10"
+		revision="0.1"
+		conf="compile-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20171007174218"/>
+	<dependencies>
+		<module organisation="commons-lang" name="commons-lang">
+			<revision name="2.6" status="release" pubdate="20110117002147" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/lang/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="2">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6701" time="0" location="C:\Users\adminut\.ivy2\cache\commons-lang\commons-lang\ivy-2.6.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.pom"/>
+				<caller organisation="default" name="fb-api-padana_2.10" conf="compile-internal, compile, provided, optional" rev="2.6" rev-constraint-default="2.6" rev-constraint-dynamic="2.6" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="commons-lang" type="jar" ext="jar" status="no" details="" size="284220" time="0" location="C:\Users\adminut\.ivy2\cache\commons-lang\commons-lang\jars\commons-lang-2.6.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/commons-lang/commons-lang/2.6/commons-lang-2.6.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.liftweb" name="lift-json_2.10">
+			<revision name="2.6.3" status="release" pubdate="20160131071510" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.liftweb.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3462" time="0" location="C:\Users\adminut\.ivy2\cache\net.liftweb\lift-json_2.10\ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/liftweb/lift-json_2.10/2.6.3/lift-json_2.10-2.6.3.pom"/>
+				<caller organisation="default" name="fb-api-padana_2.10" conf="compile-internal, compile, provided, optional" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="lift-json_2.10" type="jar" ext="jar" status="no" details="" size="486892" time="0" location="C:\Users\adminut\.ivy2\cache\net.liftweb\lift-json_2.10\jars\lift-json_2.10-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/liftweb/lift-json_2.10/2.6.3/lift-json_2.10-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.thoughtworks.paranamer" name="paranamer">
+			<revision name="2.4.1" status="release" pubdate="20120128113343" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
+				<license name="BSD" url="LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="3611" time="0" location="C:\Users\adminut\.ivy2\cache\com.thoughtworks.paranamer\paranamer\ivy-2.4.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.4.1/paranamer-2.4.1.pom"/>
+				<caller organisation="net.liftweb" name="lift-json_2.10" conf="default, compile, runtime, master" rev="2.4.1" rev-constraint-default="2.4.1" rev-constraint-dynamic="2.4.1" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="paranamer" type="jar" ext="jar" status="no" details="" size="29734" time="0" location="C:\Users\adminut\.ivy2\cache\com.thoughtworks.paranamer\paranamer\jars\paranamer-2.4.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.4.1/paranamer-2.4.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scalap">
+			<revision name="2.10" error="not found" downloaded="false" searched="false" conf="runtime(*), master(compile), compile(*)" position="-1">
+				<caller organisation="net.liftweb" name="lift-json_2.10" conf="default, compile, runtime, master" rev="2.10" rev-constraint-default="2.10" rev-constraint-dynamic="2.10" callerrev="2.6.3"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10" error="not found" downloaded="false" searched="false" conf="runtime(*), master(compile), default(compile), compile(*)" position="-1">
+				<caller organisation="default" name="fb-api-padana_2.10" conf="compile-internal, compile, provided, optional" rev="2.10" rev-constraint-default="2.10" rev-constraint-dynamic="2.10" callerrev="0.1"/>
+				<caller organisation="net.liftweb" name="lift-json_2.10" conf="default, compile, runtime, master" rev="2.10" rev-constraint-default="2.10" rev-constraint-dynamic="2.10" callerrev="2.6.3"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
